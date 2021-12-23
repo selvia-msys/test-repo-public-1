@@ -1,6 +1,0 @@
-scan f
-
-
-
-
-ZDcsdc
