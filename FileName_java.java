@@ -1,13 +1,6 @@
 Calss A(){
   
-   methosA()
-     
-     
-     
-     
-     
-     
-     {
+  
      
      
      
