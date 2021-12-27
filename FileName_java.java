@@ -1,9 +1,0 @@
-Calss A(){
-  
-   methosA()
-     
-     
-     
-     {
-     
-     }
