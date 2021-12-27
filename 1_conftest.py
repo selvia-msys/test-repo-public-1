@@ -2,6 +2,8 @@ import pytest
 from base.webdriverfactory import WebDriverFactory
 from pages.home.login_page import LoginPage
 
+
+
 @pytest.yield_fixture()
 def setUp():
     print("Running method level setUp")
@@ -27,7 +29,9 @@ def pytest_addoption(parser):
     parser.addoption("--browser")
     parser.addoption("--osType", help="Type of operating system")
 
-@pytest.fixture(scope="session")
+    
+    
+@pytest.fixture(scope="sessin")
 def browser(request):
     return request.config.getoption("--browser")
 
