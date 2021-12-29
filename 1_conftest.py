@@ -8,6 +8,9 @@ def setUp():
     yield
     print("Running method level tearDown")
     print("Running method level tearDown")
+    
+    
+    
 
 @pytest.yield_fixture(scope="class")
 def oneTimeSetUp(request, browser):
