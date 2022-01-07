@@ -30,6 +30,8 @@ def pytest_addoption(parser):
 def browser(request):
     return request.config.getoption("--browser")
 
+
+
 @pytest.fixture(scope="session")
 def osType(request):
     return request.config.getoption("--osType")
