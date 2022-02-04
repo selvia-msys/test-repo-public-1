@@ -38,9 +38,6 @@ def oneTimeSetUp(request, browser):
 @pytest.fixture(scope="session")
 def browser(request):
     return request.config.getoption("--browser")
-
-
-
 @pytest.fixture(scope="session")
 def osType(request):
     return request.config.getoption("--osType")
