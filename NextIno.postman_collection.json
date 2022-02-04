@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "cbf512f9-9779-4d90-9a4c-4a46d3822f7a",
+		"name": "NextIno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "M1",
+			"item": [
+				{
+					"name": "LoginCases",
+					"item": [
+						{
+							"name": "/login - VerifyValidCredentials",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"john\", \"password\": \"Newpass1$\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/login/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/currentUser - VerifyChangePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzc5MDgxLCJqdGkiOiJhMGNmZWY0OTUxM2I0ZmY0OWZhOGE4ZDQ0OTM1MTI4NyIsInVzZXJfaWQiOjEsInVzZXIiOiJ0ZXN0In0.Fz4DUTyBLkrPwh1r1CRygvy1opspuUhg8H_1Fq0NxbE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"password\": \"123\", \"old_password\": \"Password@123\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/currentUser/changePassword",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"currentUser",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/Login - VerifyInValidToken",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzczNzgxLCJqdGkiOiI0OTEyMjQxMDI5NzM0MWI5YTI2MzVmODNiZmM5MWVhYiIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.fWmcIWLvTCoqQN_zvTZRgolN75ILTiKyjkD-pru-A4o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/login/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/login - ValidCredentialsCase2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"test\", \"password\": \"Password@123\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/login/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/Logout - verfiyLogout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzczNzgxLCJqdGkiOiI0OTEyMjQxMDI5NzM0MWI5YTI2MzVmODNiZmM5MWVhYiIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.fWmcIWLvTCoqQN_zvTZRgolN75ILTiKyjkD-pru-A4o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"refresh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyMDgzMTMwMiwianRpIjoiYTMwYWU5NzMzY2RmNDdhMWE4OTk3N2NmZDY3NzQ3N2UiLCJ1c2VyX2lkIjoyLCJ1c2VyIjoiam9obiJ9.QGaBGu_Gob-fKGRQsRaH4Ht7zLDQN2me1D3WKBG7-bs\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/logout/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"logout",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/login - WrongCredentials",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"wrong\", \"password\": \"Azerty111\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/login/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/login - BlankCredentials",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"\", \"password\": \"\"}"
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/login/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VerifyCurrentUserLogin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzczNzgxLCJqdGkiOiI0OTEyMjQxMDI5NzM0MWI5YTI2MzVmODNiZmM5MWVhYiIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.fWmcIWLvTCoqQN_zvTZRgolN75ILTiKyjkD-pru-A4o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/currentUser/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"currentUser",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/currentUser - VerifyUpdateCurrentUserDetails",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzczNzgxLCJqdGkiOiI0OTEyMjQxMDI5NzM0MWI5YTI2MzVmODNiZmM5MWVhYiIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.fWmcIWLvTCoqQN_zvTZRgolN75ILTiKyjkD-pru-A4o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"LocalUserDisplay\": \"update display\",\r\n  \"LocalUserMail\": \"johnupdate@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/currentUser/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"currentUser",
+										""
+									],
+									"query": [
+										{
+											"key": "LocalUserName",
+											"value": "JohnTest",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Resources",
+					"item": [
+						{
+							"name": "/resources - verifyResourcesList",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzc2NzI2LCJqdGkiOiJhZDc3NjE4OWQ0MTQ0YzJmODdhYzdjYzM1ZWVkNDU3MiIsInVzZXJfaWQiOjEsInVzZXIiOiJ0ZXN0In0.nZiuqQXc5ZImLH8mfyQQzdDJCQEq2BCBwPIuHX3SM3U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/currentUser/resources/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"currentUser",
+										"resources",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UserData",
+					"item": [
+						{
+							"name": "/userData -verifyGetUserData",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzc5NjQ3LCJqdGkiOiI2MzBjMjU0MzIxOTk0MmRlYjVhOGU2ZjA3ZmM3M2UxNSIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.6e_o8x4qDdqXz8GgJxdcSspYTgBen5yrtOFe1Rmo3No",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/currentUser/userData/1/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"currentUser",
+										"userData",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/userData -verifyUserDataList",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIwNzc5NjQ3LCJqdGkiOiI2MzBjMjU0MzIxOTk0MmRlYjVhOGU2ZjA3ZmM3M2UxNSIsInVzZXJfaWQiOjIsInVzZXIiOiJqb2huIn0.6e_o8x4qDdqXz8GgJxdcSspYTgBen5yrtOFe1Rmo3No",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"MyData\": “MyValue\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/currentUser/userData",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"currentUser",
+										"userData"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/userData - UpdateUserData",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"MyData\": \"MyValue\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/v1/userData/1/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"v1",
+										"userData",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/userData - VerifyDeleteUserData",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://dc01issymsys01v.fr.atempo.network/SSY/api/currentUser/userData/1/",
+									"protocol": "http",
+									"host": [
+										"dc01issymsys01v",
+										"fr",
+										"atempo",
+										"network"
+									],
+									"path": [
+										"SSY",
+										"api",
+										"currentUser",
+										"userData",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
