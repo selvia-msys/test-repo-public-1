@@ -4,10 +4,7 @@ from pages.home......login_page import LoginPag
 
 @pytest.yield_fixture()
 def setUp():
-    
-    
-    
-    
+   
     print("Running method level setUp")
     yield
     print("Running method level tearDown")
