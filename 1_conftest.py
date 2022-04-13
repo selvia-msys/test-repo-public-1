@@ -4,10 +4,7 @@ from pages.home......login_page import LoginPag
 
 @pytest.yield_fixture()
 def setUp():
-    
-    
-    
-    
+   
     print("Running method level setUp")
     yield
     print("Running method level tearDown")
@@ -19,9 +16,6 @@ def oneTimeSetUp(request, browser):
     driver = wdf.getWebDriverInstance()
     lp = LoginPage(driver)
     lp.login("test@email.com", "abcabc")
-
-    
-    
     if request.cls is not None:
         request.cls.driver = driver
     yield driver
